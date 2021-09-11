@@ -4,9 +4,19 @@
   "description": "Library for efficiently storing 16x16 pixel images using web-safe colors as compressed strings",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags",
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
   },
-  "keywords": [],
+  "keywords": [
+    "pixelmap"
+  ],
   "author": "Robin Bihun",
   "license": "MIT",
   "repository": {
@@ -17,7 +27,16 @@
     "url": "https://github.com/robinbihun/pixelmap.imagelib/issues"
   },
   "homepage": "https://github.com/robinbihun/pixelmap.imagelib#readme",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.1",
+    "prettier": "^2.4.0",
+    "ts-jest": "^27.0.5",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.4.3"
+  },
   "files": [
-    ""
-  ],
+    "lib/**/*"
+  ]
 }
