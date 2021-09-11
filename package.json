@@ -1,0 +1,23 @@
+{
+  "name": "pixelmap.imagelib",
+  "version": "1.0.0",
+  "description": "Library for efficiently storing 16x16 pixel images using web-safe colors as compressed strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Robin Bihun",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinbihun/pixelmap.imagelib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robinbihun/pixelmap.imagelib/issues"
+  },
+  "homepage": "https://github.com/robinbihun/pixelmap.imagelib#readme",
+  "files": [
+    ""
+  ],
+}
