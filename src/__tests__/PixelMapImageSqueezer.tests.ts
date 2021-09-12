@@ -2,7 +2,7 @@ import PixelMapImage from '../PixelMapImage';
 import PixelMapImageSqueezer from '../PixelMapImageSqueezer';
 
 // TODO: wait for more test cases...
-// In theory, we should see an improvement 99% of the time, only images with every other pixel changing color should result in equal length to the legacy storage.
+// In theory, we should see an improvement most of the time, only images with every other pixel changing color should result in equal length to the legacy storage.
 test('Can squeeze and un-squeeze pixels :-)', () => {
   let legacyData =
     '390390390390390390390000000390390390390390390390390390390390390390000FF0FF0000390390390390390390390390390390390390000FF0FF0000390390390390390390390390390390390000FF0FF0FF0F' +
