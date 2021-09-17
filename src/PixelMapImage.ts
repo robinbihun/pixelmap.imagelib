@@ -370,7 +370,7 @@ export class PixelMapImageHelpers {
    * @param hexColor - The hex color code to convert to pixelmap color space (e.g. #003399)
    */
   public static getColorSpaceValue(hexColor: string) : string {
-    let colorSpaceIndex = IMAGE_COLOR_SPACE.indexOf(hexColor);
+    let colorSpaceIndex = IMAGE_COLOR_SPACE.indexOf(hexColor.toUpperCase());
     if (colorSpaceIndex === -1) {
       throw new Error('Image data contains invalid color, not in web safe color space');
     }
